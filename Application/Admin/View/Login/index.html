@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>登录</title>                       <!--网页标题-->
+        <meta name="description" content="登录页面">  <!--网页介绍-->
+        <META NAME ="keywords" CONTENT="登录">    <!--搜索关键词-->
+        <script language="JavaScript">
+			function changeVerify(){
+ 			var timenow = new Date().getTime();
+ 			document.getElementById('verifyImg').src='{:U('/Home/Login/verify','','')}'+'/'+timenow;  
+			}
+		</script>
+		<link rel="stylesheet" href="__Css__/bootstrap.min.css">
+		<link rel="stylesheet" href="__Css__/login.css">
+		<link rel="shortcut icon" type="image/x-icon" href="__Image__/favicon.ico" />
+		<style type="text/css">
+		h1{
+				background-image: url("__Image__/bg-h1.jpg");
+		}
+		</style>
+		<!--[if lt IE 9]>
+      	<script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      	<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    	<![endif]-->
+	</head>
+<body>
+<div id="header">
+	<h1 class="text-center">Muban<small>模板库后台登陆</small></h1>
+</div>
+
+<div class="container main login-main">
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 col-xs-8 col-xs-offset-2">
+			<div id="login-body">
+				<h2>Login</h2>
+				<hr>
+				<form action="{:U('/Admin/Login/login')}" method="post">
+					<div class="form-group">
+						<div class="input-group">
+							<label for="username"></label>
+						    <input type="text" class="form-control" id="username" name="username" placeholder="用户名">
+						    <span class="input-group-addon glyphicon glyphicon-user"></span>
+				    	</div>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<label for="password"></label>
+	   						<input type="password" class="form-control" id="password" name="password" placeholder="密码">
+	   						<span class="input-group-addon glyphicon glyphicon-lock"></span>
+						</div>
+	    				
+					</div>
+					<div class="form-group text-center">
+						<input type="submit" value="登录" class="btn btn-success">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="Public/footer" />
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="__Js__/jquery.min.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="__Js__/bootstrap.min.js"></script>
+</body>
+</html>		

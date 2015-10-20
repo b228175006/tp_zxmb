@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- IE渲染模式 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 初始化移动浏览显示 -->
+    <title>模板库页面</title> <!-- 网页标题 -->
+    <meta name="description" content="网页介绍">
+    <meta name="keywords" content="搜索关键词">
+
+    <!-- Bootstrap -->
+    <link href="__Css__/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="__Css__/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="__Image__/favicon.ico" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <include file="Public/menu" />
+    <div class="row">
+      <foreach name="result" item="v">
+          <div class="col-sm-6 col-md-4 muban">
+              <div class="thumbnail">
+                  <img src="__Public__{$v.suolue}" alt="{$v.id}">
+                  <div class="caption">
+                      <h3>上传人：{$v.uper} <span class="label label-info">{$v.id}</span></h3>
+                      <p>上传时间：{$v.time|date="Y-m-d",###}</p>
+                      <p>
+                      <a href="__Public__{$v.orther}" class="btn btn-primary" role="button">下载</a> 
+                      </p>
+                  </div>
+              </div>
+          </div>
+        </foreach>
+    </div>
+{$page}
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="__Js__/bootstrap.min.js"></script>
+  </body>
+</html>

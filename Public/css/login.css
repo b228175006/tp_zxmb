@@ -1,0 +1,33 @@
+body{
+	/*background-image: url("__Image__/login.jpg");*/
+	background-color:#eae6cb;
+	height:100%;
+}
+#header{
+	margin:0px auto;
+}
+h1{
+	margin:0px;
+	height:260px;
+	line-height: 270px;
+}
+h1 small{
+	color:black;
+}
+.login-main{
+	margin:5% auto;
+	
+
+}
+#login-body{
+	background:rgba(210,204,168,0.7);
+	border-radius:15px;
+	padding:5px 20px;
+}
+footer{
+	margin-top:30px; 
+}
+footer p{
+	color:#000;
+
+}

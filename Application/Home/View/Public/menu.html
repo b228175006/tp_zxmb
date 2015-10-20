@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">折叠菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{:U('/Home/Index/index')}">模板库</a>
+    </div>
+    <form class="navbar-form navbar-left" role="search" method="post" action="{:U('/Home/Search/searched')}">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="搜索编号或上传人试试" name="searched" id="searched">
+          <input type="submit" value="搜索" class="btn btn-default">
+        </div>
+      </form>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

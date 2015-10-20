@@ -1,0 +1,64 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">折叠菜单</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{:U('/Admin/Index/index')}">模板库后台</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <span class="glyphicon glyphicon-modal-window"></span>
+            模板 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <!-- <li><a href="{:U('/Admin/Customer/seecustomer')}">
+              <span class="glyphicon glyphicon-search"></span>
+              已上传模板</a></li> -->
+            <li><a href="{:U('/Admin/Index/index')}">
+              <span class="glyphicon glyphicon-edit"></span>
+              上传模板</a></li>
+
+            <li class="divider"></li>
+            <!-- <li><a href="{:U('/Admin/Search/counts')}">
+              <span class="glyphicon glyphicon-equalizer"></span>
+              模板统计</a></li> -->
+            <li><a href="{:U('/Admin/Index/delmuban')}" class="needadmin" style="display:{$needadmin};">
+              <span class="glyphicon glyphicon-trash"></span>
+              删除模板</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+            <span class="glyphicon glyphicon-user"></span>
+            个人 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="{:U('/Admin/Partner/index')}">
+              <span class="glyphicon glyphicon-wrench"></span>
+              修改密码</a></li>
+            <li class="divider"></li>
+            <li><a href="{:U('/Admin/Partner/deluser')}" class="needadmin" style="display:{$needadmin};">
+              <span class="glyphicon glyphicon-king"></span>
+              伙伴管理</a></li>
+            <li><a href="{:U('/Admin/Partner/adduser')}" class="needadmin" style="display:{$needadmin};">
+              <span class="glyphicon glyphicon-edit"></span>
+              添加伙伴</a></li>
+          </ul>
+        </li>
+        <li><a href="{:U('/Admin/Login/loginout')}">
+          <span class="glyphicon glyphicon-off"></span>
+          登出</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
